@@ -10,12 +10,17 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_gamesFragment"
-            app:destination="@id/gamesFragment" />
+            android:id="@+id/action_mainFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
     </fragment>
     <fragment
-        android:id="@+id/gamesFragment"
-        android:name="com.kushalsharma.englishmedium.GamesFragment"
-        android:label="fragment_games"
-        tools:layout="@layout/fragment_games" />
+        android:id="@+id/wordFragment"
+        android:name="com.kushalsharma.englishmedium.WordFragment"
+        android:label="fragment_word"
+        tools:layout="@layout/fragment_word" />
+    <fragment
+        android:id="@+id/monsterPhrasesFragment"
+        android:name="com.kushalsharma.englishmedium.MonsterPhrasesFragment"
+        android:label="fragment_monster_phrases"
+        tools:layout="@layout/fragment_monster_phrases" />
 </navigation>

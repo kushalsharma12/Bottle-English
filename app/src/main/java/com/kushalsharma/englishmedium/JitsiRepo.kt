@@ -1,7 +1,6 @@
 package com.kushalsharma.englishmedium
 
 import android.content.Context
-import android.widget.Toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -36,17 +35,14 @@ class JitsiRepo {
                 val options = JitsiMeetConferenceOptions.Builder()
                     .setRoom(text)
                     .setAudioMuted(false)
+                    .setVideoMuted(true)
                     .setFeatureFlag("chat.enabled", false)
                     .setFeatureFlag("live-streaming.enabled", false)
                     .setFeatureFlag("raise-hand.enabled", false)
                     .setFeatureFlag("recording.enabled", false)
                     .setFeatureFlag("toolbox.alwaysVisible", true)
-                    .setFeatureFlag("video-share.enabled", false)
-                    .setFeatureFlag("video-mute.enabled", false)
                     .setFeatureFlag("help.enabled", false)
                     .setFeatureFlag("reactions.enabled", true)
-                    .setVideoMuted(true)
-                    .setAudioOnly(true)
                     .build()
                 JitsiMeetActivity.launch(context, options)
 

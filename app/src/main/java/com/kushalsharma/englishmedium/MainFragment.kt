@@ -63,26 +63,26 @@ class MainFragment : Fragment() {
         }
 
         view.btn_room1.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-1", this.requireContext())
+            jitsiRepo.buildJitsiRoom("Room-1 Bottle English", this.requireContext())
         }
         view.btn_room2.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-2", this.requireContext())
+            jitsiRepo.buildJitsiRoom("Room-2 Bottle English", this.requireContext())
 
         }
         view.btn_room3.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-3", this.requireContext())
+            jitsiRepo.buildJitsiRoom("Room-3 Bottle English", this.requireContext())
 
         }
         view.btn_room4.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-4", this.requireContext())
+            jitsiRepo.buildJitsiRoom("Room-4 Bottle English", this.requireContext())
 
         }
         view.btn_room5.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-5", this.requireContext())
+            jitsiRepo.buildJitsiRoom("Room-5 Bottle English", this.requireContext())
 
         }
         view.btn_room6.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-6", this.requireContext())
+            jitsiRepo.buildJitsiRoom("Room-6 Bottle English", this.requireContext())
 
         }
 
