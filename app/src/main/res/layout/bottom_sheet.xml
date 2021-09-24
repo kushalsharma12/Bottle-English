@@ -240,7 +240,7 @@
                             android:id="@+id/game_card_1"
                             android:layout_width="120dp"
                             android:layout_height="160dp"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginLeft="24dp"
                             android:layout_marginTop="4dp"
                             android:clickable="true"
                             android:elevation="0dp"
@@ -250,14 +250,26 @@
                             app:cardElevation="0dp"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_games_title"
-                            app:rippleColor="#9C27B0" />
+                            app:rippleColor="#9C27B0" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Fast English"
+                                android:textStyle="bold"
+                                android:textSize="28sp"
+                                android:gravity="center"
+                                android:textColor="#716665"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/game_card_2"
                             android:layout_width="120dp"
                             android:layout_height="160dp"
                             android:layout_marginTop="4dp"
-                            android:layout_marginRight="16dp"
+                            android:layout_marginRight="24dp"
                             android:clickable="true"
                             android:elevation="0dp"
                             android:focusable="true"
@@ -266,7 +278,21 @@
                             app:cardElevation="0dp"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_games_title"
-                            app:rippleColor="#9C27B0" />
+                            app:rippleColor="#9C27B0" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Monster English"
+                                android:textStyle="bold"
+                                android:textSize="28sp"
+                                android:gravity="center"
+                                android:textColor="#716665"
+                                />
+
+
+                        </com.google.android.material.card.MaterialCardView>
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

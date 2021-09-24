@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.kushalsharma.englishmedium.databinding.FragmentMainBinding
 import kotlinx.android.synthetic.main.bottom_sheet.view.*
@@ -110,18 +111,16 @@ class MainFragment : Fragment() {
         }
 
         view.game_card_1.setOnClickListener {
-            Toast.makeText(
-                this.requireContext(),
-                "Will be here in next update!",
-                Toast.LENGTH_SHORT
-            ).show()
+            //FastEnglish Game
+            Navigation.findNavController(it)
+                .navigate(R.id.action_mainFragment_to_fastEnglishGameFragment)
         }
+
         view.game_card_2.setOnClickListener {
-            Toast.makeText(
-                this.requireContext(),
-                "Will be here in next update!",
-                Toast.LENGTH_SHORT
-            ).show()
+            // Monster English Game
+            Navigation.findNavController(it)
+                .navigate(R.id.action_mainFragment_to_monsterPhrasesFragment)
+
         }
 
         return view
@@ -166,3 +165,4 @@ class MainFragment : Fragment() {
 
     }
 }
+

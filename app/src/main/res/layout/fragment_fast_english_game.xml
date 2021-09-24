@@ -1,55 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MonsterPhrasesFragment">
+    tools:context=".FastEnglishGameFragment">
+
     <WebView
+        android:id="@+id/fastEng_webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/monsterPhrases_webView"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
+        android:id="@+id/fastEngprogressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/progressBar"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/goToHome_Btn_fastEng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:focusable="true"
-        android:id="@+id/goToHome_Btn"
-        android:clickable="true"
-        app:rippleColor="#B8B2B2"
-        android:elevation="8dp"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="32dp"
-        android:background="@color/white"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_margin="16dp"
-        >
+        android:background="@color/white"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B8B2B2">
+
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/ic_baseline_cancel_24"
             android:layout_gravity="center"
-            />
+            android:src="@drawable/ic_baseline_cancel_24" />
 
     </com.google.android.material.card.MaterialCardView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

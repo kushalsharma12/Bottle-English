@@ -7,42 +7,41 @@ import android.view.ViewGroup
 import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.kushalsharma.englishmedium.databinding.FragmentMonsterPhrasesBinding
-import kotlinx.android.synthetic.main.fragment_monster_phrases.*
+import com.kushalsharma.englishmedium.databinding.FragmentFastEnglishGameBinding
 
-private var _binding: FragmentMonsterPhrasesBinding? = null
-private val binding get() = _binding
+class FastEnglishGameFragment : Fragment() {
 
-val monsterGamesUrl = "https://www.gamestolearnenglish.com/monster-phrases/"
+    private var _binding: FragmentFastEnglishGameBinding? = null
+    private val binding get() = _binding
 
+    val fastEngGameUrl = "https://www.gamestolearnenglish.com/fast-english/"
 
-class MonsterPhrasesFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentMonsterPhrasesBinding.inflate(inflater, container, false)
+        _binding = FragmentFastEnglishGameBinding.inflate(inflater, container, false)
         val view = binding!!.root
 
         //load webview with fetching url using function loadwebView
-        loadWebView(monsterGamesUrl)
+        loadWebView(fastEngGameUrl)
 
-        //going back to mainFragment
-        binding!!.goToHomeBtn.setOnClickListener {
+
+        //going back to main fragment
+        binding!!.goToHomeBtnFastEng.setOnClickListener {
             Navigation.findNavController(it)
-                .navigate(R.id.action_monsterPhrasesFragment_to_mainFragment)
+                .navigate(R.id.action_fastEnglishGameFragment_to_mainFragment)
         }
-
 
         return view
     }
 
     private fun loadWebView(url: String) {
-        binding!!.monsterPhrasesWebView.settings.javaScriptEnabled = true
-        binding!!.monsterPhrasesWebView.webViewClient = WebViewClient()
-        binding!!.monsterPhrasesWebView.loadUrl(url)
+        binding!!.fastEngWebView.settings.javaScriptEnabled = true
+        binding!!.fastEngWebView.webViewClient = WebViewClient()
+        binding!!.fastEngWebView.loadUrl(url)
 
 
     }
@@ -58,9 +57,8 @@ class MonsterPhrasesFragment : Fragment() {
         // ProgressBar will disappear once page is loaded
         override fun onPageFinished(view: WebView, url: String) {
             super.onPageFinished(view, url)
-            binding!!.progressBar.visibility = View.GONE
+            binding!!.fastEngprogressBar.visibility = View.GONE
         }
     }
-
 
 }

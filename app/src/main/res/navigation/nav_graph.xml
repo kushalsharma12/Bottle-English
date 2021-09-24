@@ -8,10 +8,16 @@
         android:id="@+id/mainFragment"
         android:name="com.kushalsharma.englishmedium.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_wordFragment"
             app:destination="@id/wordFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_monsterPhrasesFragment"
+            app:destination="@id/monsterPhrasesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_fastEnglishGameFragment"
+            app:destination="@id/fastEnglishGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/wordFragment"
@@ -22,5 +28,18 @@
         android:id="@+id/monsterPhrasesFragment"
         android:name="com.kushalsharma.englishmedium.MonsterPhrasesFragment"
         android:label="fragment_monster_phrases"
-        tools:layout="@layout/fragment_monster_phrases" />
+        tools:layout="@layout/fragment_monster_phrases">
+        <action
+            android:id="@+id/action_monsterPhrasesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fastEnglishGameFragment"
+        android:name="com.kushalsharma.englishmedium.FastEnglishGameFragment"
+        android:label="fragment_fast_english_game"
+        tools:layout="@layout/fragment_fast_english_game" >
+        <action
+            android:id="@+id/action_fastEnglishGameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
