@@ -28,7 +28,6 @@ class MainFragment : Fragment() {
     private val binding get() = _binding
 
     private var jitsiRepo = JitsiRepo()
-
     private var textToSpeech: TextToSpeech? = null
 
 
@@ -51,8 +50,15 @@ class MainFragment : Fragment() {
                 sheetBehavior!!.setState(BottomSheetBehavior.STATE_COLLAPSED)
             }
         }
+        /*  Currently there are theree section of this bottom sheet
+         1) Jitsi Rooms creating section
+         2) Games Section
+         3) Words/Slangs/Tounge Twistters/ idioms section   */
 
-        // adding text to spreech
+
+        // Jitsi Room Creating Section
+
+        // adding text to speech
         textToSpeech = TextToSpeech(
             this.requireContext()
         ) { i ->
@@ -63,33 +69,50 @@ class MainFragment : Fragment() {
             }
         }
 
+        //creating JitsiRooms by clicking on buttons
+
         view.btn_room1.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-1 Bottle English", this.requireContext())
+            buildingJitsi("Room-1 Bottle English")
         }
         view.btn_room2.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-2 Bottle English", this.requireContext())
-
+            buildingJitsi("Room-2 Bottle English")
         }
         view.btn_room3.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-3 Bottle English", this.requireContext())
-
+            buildingJitsi("Room-3 Bottle English")
         }
         view.btn_room4.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-4 Bottle English", this.requireContext())
+            buildingJitsi("Room-4 Bottle English")
 
         }
         view.btn_room5.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-5 Bottle English", this.requireContext())
+            buildingJitsi("Room-5 Bottle English")
 
         }
         view.btn_room6.setOnClickListener {
-            jitsiRepo.buildJitsiRoom("Room-6 Bottle English", this.requireContext())
+            buildingJitsi("Room-6 Bottle English")
 
         }
 
+        // creating jitsi room with user's room name
         view.btn_CreateRoom.setOnClickListener {
             alertDialog()
         }
+
+        // Games Sections
+
+        //FastEnglish Game
+        view.game_card_1.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(R.id.action_mainFragment_to_fastEnglishGameFragment)
+        }
+
+        // Monster English Game
+        view.game_card_2.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(R.id.action_mainFragment_to_monsterPhrasesFragment)
+        }
+
+//        Words/Slangs/Tounge Twistters/ idioms section
 
         view.playAudio_wod.setOnClickListener {
             textToSpeech!!.speak(view.wordOfTheDay.text.toString(), TextToSpeech.QUEUE_FLUSH, null)
@@ -97,7 +120,6 @@ class MainFragment : Fragment() {
 
         view.playAudio_sod.setOnClickListener {
             textToSpeech!!.speak(view.slangOfTheDay.text.toString(), TextToSpeech.QUEUE_FLUSH, null)
-
         }
         view.playAudio_ttod.setOnClickListener {
             textToSpeech!!.speak(
@@ -110,18 +132,7 @@ class MainFragment : Fragment() {
             textToSpeech!!.speak(view.title_idiom.text.toString(), TextToSpeech.QUEUE_FLUSH, null)
         }
 
-        view.game_card_1.setOnClickListener {
-            //FastEnglish Game
-            Navigation.findNavController(it)
-                .navigate(R.id.action_mainFragment_to_fastEnglishGameFragment)
-        }
 
-        view.game_card_2.setOnClickListener {
-            // Monster English Game
-            Navigation.findNavController(it)
-                .navigate(R.id.action_mainFragment_to_monsterPhrasesFragment)
-
-        }
 
         return view
     }
@@ -140,29 +151,30 @@ class MainFragment : Fragment() {
                     Toast.makeText(
                         this.requireContext(), "Please enter room name.", Toast.LENGTH_SHORT
                     ).show()
-
                 } else {
-                    jitsiRepo.buildJitsiRoom(editText.text.toString(), this.requireContext())
-
+                    buildingJitsi(editText.text.toString())
                 }
             })
-            .setNegativeButton("Cancel", DialogInterface.OnClickListener({ dialog, id ->
+            .setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, id ->
                 dialog.cancel()
-            }))
-
+            })
             .create()
             .show()
 
 
     }
 
+    private fun buildingJitsi(roomName: String) {
+        jitsiRepo.buildJitsiRoom(roomName, this.requireContext())
+    }
+
 
     override fun onStart() {
         super.onStart()
+        // sheet should be expanded when fragment starts
         if (sheetBehavior!!.state == BottomSheetBehavior.STATE_COLLAPSED) {
-            sheetBehavior!!.setState(BottomSheetBehavior.STATE_EXPANDED)
+            sheetBehavior!!.state = BottomSheetBehavior.STATE_EXPANDED
         }
-
     }
 }
 

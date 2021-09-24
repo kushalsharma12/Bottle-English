@@ -1,5 +1,6 @@
 package com.kushalsharma.englishmedium
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -39,12 +40,11 @@ class MonsterPhrasesFragment : Fragment() {
         return view
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private fun loadWebView(url: String) {
         binding!!.monsterPhrasesWebView.settings.javaScriptEnabled = true
         binding!!.monsterPhrasesWebView.webViewClient = WebViewClient()
         binding!!.monsterPhrasesWebView.loadUrl(url)
-
-
     }
 
     inner class WebViewClient : android.webkit.WebViewClient() {

@@ -250,17 +250,17 @@
                             app:cardElevation="0dp"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_games_title"
-                            app:rippleColor="#9C27B0" >
+                            app:rippleColor="#9C27B0">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="Fast English"
-                                android:textStyle="bold"
-                                android:textSize="28sp"
                                 android:gravity="center"
+                                android:text="Fast English"
                                 android:textColor="#716665"
-                                />
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
 
                         </com.google.android.material.card.MaterialCardView>
 
@@ -278,18 +278,17 @@
                             app:cardElevation="0dp"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_games_title"
-                            app:rippleColor="#9C27B0" >
+                            app:rippleColor="#9C27B0">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="Monster English"
-                                android:textStyle="bold"
-                                android:textSize="28sp"
                                 android:gravity="center"
+                                android:text="Monster Phrases"
                                 android:textColor="#716665"
-                                />
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
 
 
                         </com.google.android.material.card.MaterialCardView>
@@ -306,13 +305,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="20dp"
+                    android:clickable="true"
                     android:elevation="0dp"
+                    android:focusable="true"
                     app:cardBackgroundColor="#FEFBE0"
                     app:cardCornerRadius="32dp"
                     app:cardElevation="0dp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/games_title_cardView">
+                    app:layout_constraintTop_toBottomOf="@+id/games_title_cardView"
+                    app:rippleColor="#9C27B0">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -343,7 +345,7 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/playAudio_wod"
-                            android:layout_width="60dp"
+                            android:layout_width="80dp"
                             android:layout_height="0dp"
                             android:background="@android:color/transparent"
                             android:clickable="true"
@@ -361,6 +363,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center|left"
+                                android:layout_marginLeft="20dp"
                                 android:src="@drawable/ic_baseline_play_circle_24"
 
                                 />
@@ -377,13 +380,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="8dp"
+                    android:clickable="true"
                     android:elevation="0dp"
+                    android:focusable="true"
                     app:cardBackgroundColor="#FEFBE0"
                     app:cardCornerRadius="32dp"
                     app:cardElevation="0dp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/wordOfTheDay_cardView">
+                    app:layout_constraintTop_toBottomOf="@+id/wordOfTheDay_cardView"
+                    app:rippleColor="#9C27B0">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -414,7 +420,7 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/playAudio_sod"
-                            android:layout_width="60dp"
+                            android:layout_width="80dp"
                             android:layout_height="0dp"
                             android:background="@android:color/transparent"
                             android:clickable="true"
@@ -431,6 +437,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
                                 android:layout_gravity="center|left"
                                 android:src="@drawable/ic_baseline_play_circle_24"
 
@@ -446,13 +453,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="8dp"
+                    android:clickable="true"
                     android:elevation="0dp"
+                    android:focusable="true"
                     app:cardBackgroundColor="#FEFBE0"
                     app:cardCornerRadius="32dp"
                     app:cardElevation="0dp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/slangOfTheDay_caarview">
+                    app:layout_constraintTop_toBottomOf="@+id/slangOfTheDay_caarview"
+                    app:rippleColor="#9C27B0">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -484,7 +494,7 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/playAudio_ttod"
-                            android:layout_width="60dp"
+                            android:layout_width="80dp"
                             android:layout_height="0dp"
                             android:background="@android:color/transparent"
                             android:clickable="true"
@@ -502,6 +512,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center|left"
+                                android:layout_marginLeft="20dp"
                                 android:src="@drawable/ic_baseline_play_circle_24"
 
                                 />
@@ -516,13 +527,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="8dp"
+                    android:clickable="true"
                     android:elevation="0dp"
+                    android:focusable="true"
                     app:cardBackgroundColor="#FEFBE0"
                     app:cardCornerRadius="32dp"
                     app:cardElevation="0dp"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toungeTwistter_cardView">
+                    app:layout_constraintTop_toBottomOf="@+id/toungeTwistter_cardView"
+                    app:rippleColor="#9C27B0">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -554,7 +568,7 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/playAudio_idiom"
-                            android:layout_width="60dp"
+                            android:layout_width="80dp"
                             android:layout_height="0dp"
                             android:background="@android:color/transparent"
                             android:clickable="true"
@@ -572,6 +586,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center|left"
+                                android:layout_marginLeft="20dp"
                                 android:src="@drawable/ic_baseline_play_circle_24"
 
                                 />
@@ -589,6 +604,13 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/idiom_cardView">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:text="Loving Learning ♥"
+                        android:textSize="12sp"
+                        />
 
                 </FrameLayout>
 
