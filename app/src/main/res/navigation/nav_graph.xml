@@ -18,6 +18,15 @@
         <action
             android:id="@+id/action_mainFragment_to_fastEnglishGameFragment"
             app:destination="@id/fastEnglishGameFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_slangFragment"
+            app:destination="@id/slangFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_toungeTwisterFragment"
+            app:destination="@id/toungeTwisterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_idiomFragment"
+            app:destination="@id/idiomFragment" />
     </fragment>
     <fragment
         android:id="@+id/wordFragment"
@@ -42,4 +51,19 @@
             android:id="@+id/action_fastEnglishGameFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/slangFragment"
+        android:name="com.kushalsharma.englishmedium.SlangFragment"
+        android:label="fragment_slang"
+        tools:layout="@layout/fragment_slang" />
+    <fragment
+        android:id="@+id/toungeTwisterFragment"
+        android:name="com.kushalsharma.englishmedium.ToungeTwisterFragment"
+        android:label="fragment_tounge_twister"
+        tools:layout="@layout/fragment_tounge_twister" />
+    <fragment
+        android:id="@+id/idiomFragment"
+        android:name="com.kushalsharma.englishmedium.IdiomFragment"
+        android:label="fragment_idiom"
+        tools:layout="@layout/fragment_idiom" />
 </navigation>

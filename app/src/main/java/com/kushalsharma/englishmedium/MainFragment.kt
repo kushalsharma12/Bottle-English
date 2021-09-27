@@ -132,6 +132,20 @@ class MainFragment : Fragment() {
             textToSpeech!!.speak(view.title_idiom.text.toString(), TextToSpeech.QUEUE_FLUSH, null)
         }
 
+        view.wordOfTheDay_cardView.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_wordFragment)
+        }
+        view.slangOfTheDay_caarview.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_slangFragment)
+        }
+        view.idiom_cardView.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_idiomFragment)
+        }
+        view.toungeTwistter_cardView.setOnClickListener {
+            Navigation.findNavController(it)
+                .navigate(R.id.action_mainFragment_to_toungeTwisterFragment)
+        }
+
 
 
         return view

@@ -2,4 +2,8 @@
     <string name="app_name">Bottle English</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="words">Words</string>
+    <string name="title_slangFragment">Slangs</string>
+    <string name="idioms_title">Idioms</string>
+    <string name="tounge_twisters_title_fragment">Tounge Twisters</string>
 </resources>

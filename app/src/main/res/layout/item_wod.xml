@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/item_wod_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="20dp"
-        android:clickable="true"
+        android:layout_marginTop="12dp"
         android:elevation="0dp"
-        android:focusable="true"
         app:cardBackgroundColor="#FEFBE0"
         app:cardCornerRadius="32dp"
         app:cardElevation="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#9C27B0">
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,10 +26,11 @@
 
             <TextView
                 android:id="@+id/item_wordOfTheDay"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
+                app:layout_constraintRight_toLeftOf="@+id/item_playAudio_wod"
                 android:text="Absurd"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -39,12 +39,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="16dp"
                 android:paddingBottom="16dp"
-                android:text="meaning- unreasonable or illogical."
                 android:textSize="14sp"
+                app:layout_constraintRight_toLeftOf="@id/item_playAudio_wod"
+                android:id="@+id/item_meaning"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_wordOfTheDay" />
 

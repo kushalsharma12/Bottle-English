@@ -9,20 +9,20 @@ import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.kushalsharma.englishmedium.databinding.FragmentMonsterPhrasesBinding
-import kotlinx.android.synthetic.main.fragment_monster_phrases.*
 
-private var _binding: FragmentMonsterPhrasesBinding? = null
-private val binding get() = _binding
 
-val monsterGamesUrl = "https://www.gamestolearnenglish.com/monster-phrases/"
+const val monsterGamesUrl = "https://www.gamestolearnenglish.com/monster-phrases/"
 
 
 class MonsterPhrasesFragment : Fragment() {
 
+    private var _binding: FragmentMonsterPhrasesBinding? = null
+    private val binding get() = _binding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentMonsterPhrasesBinding.inflate(inflater, container, false)
         val view = binding!!.root
